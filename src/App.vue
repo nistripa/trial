@@ -34,6 +34,7 @@
 import { PhysicsForce } from './data/physicsforce.js'
 import { PhysicsEnergy } from './data/physicsenergy.js'
 import { ComputersMSWorld } from './data/computersmsword.js'
+import { MathsTest1 } from './data/mathstest1.js'
 import { result } from './data/result.js'
 // import SubjectList from './components/SubjectList.vue'
 import SubjectList from './components/SubjectList'
@@ -101,7 +102,27 @@ displayquestions(subject, topic)
   this.selectedtopic = topic;
   this.hello = subject + topic; 
   this.question = [this.hello];
-  this.hello === "PhysicsEnergy" ? this.question = PhysicsEnergy : this.hello === "PhysicsForce" ? this.question = PhysicsForce : this.hello === "ComputersMS Word" ? this.question = ComputersMSWorld :'' ;
+
+  switch(this.hello) {
+  case "PhysicsEnergy":
+    this.question = PhysicsEnergy
+    break;
+  
+  case "PhysicsForce":
+    this.question = PhysicsForce
+    break;
+  
+  case "ComputersMS Word":
+    this.question = ComputersMSWorld
+    break;
+  
+  case "MathsTest1":
+    this.question = MathsTest1
+    break;
+  
+  default:
+    // code block
+}
 
 }
   }
