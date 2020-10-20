@@ -11,8 +11,8 @@ export const PhysicsEnergy = {
       },
       {
         id: '2',
-        text: 'Velocity Ratio is',
-        correctAnswer: 'Velocity of effort/ Velocity of load',
+        text: 'Efficiency of a machine is',
+        correctAnswer: 'Output/ Input',
         values: ['Velocity of effort/ Velocity of load','Velocity of load/ Velocity of effort','Output/ Input','Input/Output'],
         type : 'radio',
         direction: 'V'
