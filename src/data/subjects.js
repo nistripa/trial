@@ -13,7 +13,7 @@ export const subjects = {
       {
         id: 3,
         subject: 'Chemistry',
-        Topics: ['Elements and Mixtures']
+        Topics: ['Elements and Mixtures: Part-1']
       },
       {
         id: 4,

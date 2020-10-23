@@ -18,28 +18,27 @@
         <input type="radio" :name="q.id" id="a" :value="a" @click="checkrightAnswer(a, q.correctAnswer, index)">
         <label :for="a">{{a}}</label>
       </div>      
-          <div v-if="submitted && result[index] === 0"><img class="image" src="./img/delete.jpg"></div>
-          <div v-if="submitted && result[index] === 1"><img class="image" src="./img/tick.png"></div>
+          <div v-if="submitted && result[index] === 0"><img class="image" src="./img/wrong.png">
+           <div class="wrongAnswer">Correct Answer :  {{q.correctAnswer}}</div></div>
+          <div v-if="submitted && result[index] === 1"><img class="image" src="./img/tick.png">
+          </div>
           <br><br>
     </div>
     <br><br>
-    <button @click="SumArray">submit</button>
+    <button :class="submitted ? 'submitted' : 'notsubmitted'" id="submit" @click="SumArray">submit</button>
 
   </div>
 </template>
 
 <script>
-// eslint-disable-next-line no-unused-vars
-// import HelloWorld from './components/HelloWorld.vue'
+
 import { PhysicsForce } from './data/physicsforce.js'
 import { PhysicsEnergy } from './data/physicsenergy.js'
 import { ComputersMSWorld } from './data/computersmsword.js'
 import { MathsTest1 } from './data/mathstest1.js'
+import { ChemEnMP1 } from './data/chemenmp1.js'
 import { result } from './data/result.js'
-// import SubjectList from './components/SubjectList.vue'
 import SubjectList from './components/SubjectList'
-
-
 
 export default {
   name: 'App',
@@ -62,12 +61,11 @@ export default {
       selectedsubject: '',
       selectedtopic: '',
       hello: ''
-
     }
   },
   methods: {
     checkrightAnswer(id, a, index){
-
+    document.getElementById("submit").enabled = false;
       if (id === a)
       {
         console.log(result);
@@ -82,8 +80,10 @@ export default {
         this.correct = 'correct'
       }
     },
+    
 SumArray(){
         this.submitted = true;
+        
         this.total = 0;
   var output;
   output = result.reduce(function(total, num){ 
@@ -93,15 +93,20 @@ SumArray(){
   this.total = output;
   
 },
+getbuttonClass(){
+  return this.submitted === true ? "submitted" : "notsubmitted";
+},
 displayquestions(subject, topic)
 {
-  // console.log('insidedisplayquestionss');
-  // console.log(subject);
-  // console.log(topic);
+  console.log('insidedisplayquestionss');
+  console.log(subject);
+  console.log(topic);
   this.selectedsubject =subject;
   this.selectedtopic = topic;
   this.hello = subject + topic; 
   this.question = [this.hello];
+
+  console.log(this.hello)
 
   switch(this.hello) {
   case "PhysicsEnergy":
@@ -119,6 +124,12 @@ displayquestions(subject, topic)
   case "MathsTest1":
     this.question = MathsTest1
     break;
+
+   case "ChemistryElements and Mixtures: Part-1":
+    this.question = ChemEnMP1
+    break;
+   
+
   
   default:
     // code block
@@ -153,4 +164,16 @@ displayquestions(subject, topic)
 option {
   margin: 0.5em;
 }
+.wrongAnswer{
+  color: red;
+}
+.submitted{
+      pointer-events: none;
+    color: grey;
+}
+.notsubmitted{
+    background-color:greenyellow;
+    color: red;
+}
+
 </style>

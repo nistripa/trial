@@ -80,6 +80,42 @@ export const PhysicsEnergy = {
         values: ['10N','20N','30N','2N'],
         type : 'radio',
         direction: 'V'
-      }
+      },
+      {
+        id: 11,
+        text: 'A single moveable pully is used to lift a load of 800N. What is the effort required?.',
+        correctAnswer: '400N',
+        values: ['800N', '400N', '200N', '1600N'],
+        type: 'radio',
+        direction: 'V',
+        store: '',
+    },
+    {
+        id: 12,
+        text: 'The mechnical advantage of a amchine is 4. Calculate the force requied to lift a load of 100 N.',
+        correctAnswer: '25N',
+        values: ['400N', '40N', '25N', '200N'],
+        type: 'radio',
+        direction: 'V',
+        store: '',
+    },
+    {
+        id: 13,
+        text: 'A lever of first order has a total length of 3m and is able to lift a load of 60N with a  force of 30N. Find the position of fulcrum',
+        correctAnswer: '1m from 60N and 2 m from 30N', 
+        values: ['2m from 60N and 1m from 30N', '1m from 60N and 2m from 30N', '2m from 60N and 3m from 30N', '2m from 60N and 4m from 30N'],
+        type: 'radio',
+        direction: 'V',
+        store: '',
+    },
+    {
+        id: 14,
+        text: '20N effort is required to life a stone of weight 120N. Find the mechanical advantage',
+        correctAnswer: '6', 
+        values: ['6', '240', '20', '120'],
+        type: 'radio',
+        direction: 'V',
+        store: '',
+    }
     ]
     };
