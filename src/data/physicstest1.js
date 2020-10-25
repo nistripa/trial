@@ -40,7 +40,30 @@ export const PhysicsTest1 = {
         values: ['2','4', '200', '100'],
         type : 'radio',
         direction: 'V'
-        }
-        
+        },
+        {
+          id: '6',
+          text: 'The load arm of a lever is 100CM long and its effort arm is 200 cm long. How much load can be lifted using an effort of 20 N?',
+          correctAnswer: '40N',
+          values: ['40N','20N', '10N', '5N'],
+          type : 'radio',
+          direction: 'V'
+          },
+          {
+            id: '7',
+            text: 'Find the mechnical advantge of a lever in which load arm is 2 m and effort arm is 10 m',
+            correctAnswer: '5',
+            values: ['40','2', '4', '20'],
+            type : 'radio',
+            direction: 'V'
+            },
+            {
+              id: '8',
+              text: 'A single moveable pully is used to lift a load of 60N. What is effort required?',
+              correctAnswer: '30N',
+              values: ['30N','120N', '15N', '60N'],
+              type : 'radio',
+              direction: 'V'
+            }
     ]
     };
