@@ -3,17 +3,17 @@ export const subjects = {
       {
         id: 1,
         subject: 'Physics',
-        Topics: ['Force', 'Energy']
+        Topics: ['Force', 'Energy','Test1']
       },
       {
         id: 2,
         subject: 'Computers',
-        Topics: ['MS Word', 'File Management']
+        Topics: ['Test1', 'Test2']
       },
       {
         id: 3,
         subject: 'Chemistry',
-        Topics: ['Elements and Mixtures: Part-1']
+        Topics: ['Elements']
       },
       {
         id: 4,

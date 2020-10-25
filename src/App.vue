@@ -3,6 +3,7 @@
     <SubjectList @showquestions="displayquestions">
 
     </SubjectList>
+    
       <div class="title">
       {{question.title}}
       </div>
@@ -23,8 +24,9 @@
           <div v-if="submitted && result[index] === 1"><img class="image" src="./img/tick.png">
           </div>
           <br><br>
+
     </div>
-    <br><br>
+     <br><br>
     <button :class="submitted ? 'submitted' : 'notsubmitted'" id="submit" @click="SumArray">submit</button>
 
   </div>
@@ -34,7 +36,9 @@
 
 import { PhysicsForce } from './data/physicsforce.js'
 import { PhysicsEnergy } from './data/physicsenergy.js'
-import { ComputersMSWorld } from './data/computersmsword.js'
+import { PhysicsTest1 } from './data/physicstest1.js'
+import { ComputersTest1 } from './data/computerstest1.js'
+import { ComputersTest2 } from './data/computerstest2.js'
 import { MathsTest1 } from './data/mathstest1.js'
 import { ChemEnMP1 } from './data/chemenmp1.js'
 import { result } from './data/result.js'
@@ -116,9 +120,17 @@ displayquestions(subject, topic)
   case "PhysicsForce":
     this.question = PhysicsForce
     break;
+
+  case "PhysicsTest1":
+    this.question = PhysicsTest1
+    break;
   
-  case "ComputersMS Word":
-    this.question = ComputersMSWorld
+  case "ComputersTest1":
+    this.question = ComputersTest1
+    break;
+
+  case "ComputersTest2":
+    this.question = ComputersTest2
     break;
   
   case "MathsTest1":
@@ -170,6 +182,7 @@ option {
 .submitted{
       pointer-events: none;
     color: grey;
+    
 }
 .notsubmitted{
     background-color:greenyellow;
